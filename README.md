@@ -1,10 +1,10 @@
 # ScanNet-Layout Dataset
 
 <p align="center">
-  <img src="https://github.com/vevenom/ScanNet-Layout/blob/master/image_ex/ex.gif" alt="ScanNet-Layout">
+  <img src="https://github.com/vevenom/ScanNet-Layout/blob/master/image_ex/ex.gif" alt="ScanNet-Layout" width="300">
 </p>
 
-We introduce a dataset for evaluating the quality of general 3D room layouts. The dataset includes views from the [ScanNet](http://www.scan-net.org/)
+We introduce the ScanNet-Layout dataset for benchmarking general 3D room layouts. The benchmark includes views from the [ScanNet](http://www.scan-net.org/)
  dataset that span different layout settings, are equally distributed to represent both cuboid and general room
 layouts, challenging views that are neglected in previous room layout datasets,
 and in some cases we include similar viewpoints to evaluate effects of noise (e.g.
@@ -14,20 +14,20 @@ motion blur)
 
 The dataset can be obtained here: [Dataset Link](https://files.icg.tugraz.at/f/2cefdc3a5b9a48d7aaaa/?dl=1)
 
-After downloading the dataset, you can extract it into default ScanNet_Layout_annotations folder. We assume the following folder hierarchy:
+After downloading the dataset, you can extract it into GT_PATH folder (default ./ScanNet_Layout_annotations). We assume the following folder hierarchy:
 
-* |--ScanNet_Layout_annotations  
+* |--GT_PATH  
   * |----SCENE_ID  
-    * |--------color - These are the original color images from the ScanNet dataset (*.jpg)  
-    * |--------depth - These are the corresponding depth maps from the ScanNet dataset (*.png)  
-    * |--------labels_json - These are the corresponding 2D polygon annotations (*.json)  
-    * |--------layout_depth - These are the corresponding generated layout depth maps annotations clipped to 10m (*.npy)  
-    * |--------layout_depth_vis - These are the corresponding generated layout depth maps visualisations (*.jpg)  
-    * |--------polygon_vis - These are the corresponding annotated polygons visualisations (*.jpg)  
-    * |--------valid_masks - These are the corresponding masks used for the depth map generation (*.json)
+    * |--------color - original color images from the ScanNet dataset (*.jpg)  
+    * |--------depth - corresponding depth maps from the ScanNet dataset (*.png)  
+    * |--------labels_json - corresponding 2D polygon annotations (*.json)  
+    * |--------layout_depth - corresponding generated layout depth maps annotations clipped to 10m (*.npy)  
+    * |--------layout_depth_vis - corresponding generated layout depth maps visualisations (*.jpg)  
+    * |--------polygon_vis - corresponding annotated polygons visualisations (*.jpg)  
+    * |--------valid_masks - corresponding masks used for the depth map generation (*.json)
 
 
-## Evaluation scripts
+## Running the Evaluation Script
 
 For evaluating the quality of recovered layouts you can run the following script:
 
@@ -35,18 +35,19 @@ For evaluating the quality of recovered layouts you can run the following script
  python evaluate_3d_layouts.py --pred PRED_PATH --gt GT_PATH --out COMP_OUTPUT_PATH --eval_2D --eval_3D
 ```
 
-PRED_PATH points to the prediction folder
+PRED_PATH points to the prediction folder.
 
-GT_PATH points to the ground truth folder. The default value for GT_PATH is ./ScanNet_Layout_annotations
+GT_PATH points to the ground truth folder. The default value for GT_PATH is ./ScanNet_Layout_annotations.
 
 COMP_OUTPUT_PATH points to the output folder.
 
 where eval_2D, eval_3D specify whether to evaluate the quality of layouts in 2D and 3D. 
 
+## Running the Evaluation Script
 
 The script assumes the following hierarchy for PRED_PATH:
 
-* |--ScanNet_Layout_annotations  
+* |--PRED_PATH
     * |----labels_json
       * |------SCENE_ID  
         * |------ *.json  
