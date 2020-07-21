@@ -4,11 +4,11 @@
   <img src="https://github.com/vevenom/ScanNet-Layout/blob/master/image_ex/ex.gif" alt="ScanNet-Layout" width="300">
 </p>
 
-We introduce the ScanNet-Layout dataset for benchmarking general 3D room layouts. The benchmark includes views from the [ScanNet](http://www.scan-net.org/)
+We introduce the ScanNet-Layout dataset for benchmarking general 3D room layout estimation from single view. The benchmark includes views from the [ScanNet](http://www.scan-net.org/)
  dataset that span different layout settings, are equally distributed to represent both cuboid and general room
-layouts, challenging views that are neglected in previous room layout datasets,
+layouts, challenging views that are neglected in existing room layout datasets,
 and in some cases we include similar viewpoints to evaluate effects of noise (e.g.
-motion blur)
+motion blur). Our benchmark supports evaluation metrics both in 2D and 3D.
 
 ## Data
 
@@ -43,7 +43,7 @@ COMP_OUTPUT_PATH points to the output folder.
 
 where eval_2D, eval_3D specify whether to evaluate the quality of layouts in 2D and 3D. 
 
-## Running the Evaluation Script
+#### Predictions Format
 
 The script assumes the following hierarchy for PRED_PATH:
 
@@ -65,7 +65,13 @@ Predicted *.json files in labels_json folder contain the 2D polygons and should 
 e.g.:
 
 ```
-{"shapes": [{"points": [[275, 379], [283, 0], [0, 0], [0, 479], [94, 479], [275, 379]], "shape_type": "polygon", "plane": [0.7948528396971843, 0.17106515939675068, -0.5821904108329907, 1.660079846881285], "label": "wall"}, {"points": [[275, 379], [283, 0], [639, 0], [639, 479], [519, 479], [275, 379]], "shape_type": "polygon", "plane": [-0.5562020385107806, 0.1743546045935068, -0.8125513917368514, 2.0026558618881487], "label": "wall"}, {"points": [[275, 379], [94, 479], [519, 479], [275, 379]], "shape_type": "polygon", "plane": [0.056890187628746154, -0.960978788526898, -0.2707088372272719, 1.3907352987241348], "label": "floor"}]}
+{"shapes": 
+[
+{"points": [[275, 379], [283, 0], [0, 0], [0, 479], [94, 479], [275, 379]]}, 
+{"points": [[275, 379], [283, 0], [639, 0], [639, 479], [519, 479], [275, 379]]}, 
+{"points": [[275, 379], [94, 479], [519, 479], [275, 379]]}
+]
+}
 ```
 
 Predicted *.npy files in layout_depth folder contain layout depth maps.
