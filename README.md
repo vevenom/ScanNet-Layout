@@ -4,11 +4,12 @@
   <img src="https://github.com/vevenom/ScanNet-Layout/blob/master/image_ex/ex.gif" alt="ScanNet-Layout" width="300">
 </p>
 
-We introduce the ScanNet-Layout dataset for benchmarking general 3D room layout estimation from single view. The benchmark includes views from the [ScanNet](http://www.scan-net.org/)
+We introduce the ScanNet-Layout dataset for benchmarking general 3D room layout estimation from single view. The benchmark includes 293 views from the [ScanNet](http://www.scan-net.org/)
  dataset that span different layout settings, are equally distributed to represent both cuboid and general room
 layouts, challenging views that are neglected in existing room layout datasets,
 and in some cases we include similar viewpoints to evaluate effects of noise (e.g.
-motion blur). Our benchmark supports evaluation metrics both in 2D and 3D.
+motion blur). Our benchmark supports evaluation metrics both in 2D and 3D. Please refer to our original paper 
+[General 3D Room Layout from a Single View by Render-and-Compare](https://arxiv.org/abs/2001.02149) for more information.
 
 ## Data
 
