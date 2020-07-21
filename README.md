@@ -1,7 +1,7 @@
 # ScanNet-Layout Dataset
 
 <p align="center">
-  <img src="" alt="ScanNet-Layout">
+  <img src="https://github.com/vevenom/ScanNet-Layout/blob/master/image_ex/ex.gif" alt="ScanNet-Layout">
 </p>
 
 We introduce a dataset for evaluating the quality of general 3D room layouts. The dataset includes views from the [ScanNet](http://www.scan-net.org/)
