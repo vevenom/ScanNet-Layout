@@ -102,12 +102,12 @@ for scene in scenes_list:
 
             # Parse GT polys
             gt_polys_masks = []
-            gt_polys_types = []
+            # gt_polys_types = []
             gt_polys_edges_mask = np.zeros((h, w))
             edge_thickness = 1
             for polygon_dict in labelme_data['shapes']:
                 polygon = polygon_dict['points']
-                polygon_type = polygon_dict['label']
+                # polygon_type = polygon_dict['label']
                 polygon = np.array(polygon, dtype=np.float64)
                 polygon = polygon.reshape((-1, 1, 2))
                 polygon *= scale
@@ -116,7 +116,7 @@ for scene in scenes_list:
                 gt_poly_mask = np.zeros((h, w))
                 cv2.fillPoly(gt_poly_mask, [polygon], color=[1.])
                 gt_polys_masks.append(gt_poly_mask)
-                gt_polys_types.append(polygon_type)
+                # gt_polys_types.append(polygon_type)
 
                 cv2.polylines(gt_polys_edges_mask, [polygon], isClosed=True, color=[1.], thickness=edge_thickness)
 
@@ -137,7 +137,7 @@ for scene in scenes_list:
             pred_polys_edges_mask = np.zeros((h, w))
             for polygon_dict in pred_labelme_data['shapes']:
                 polygon = polygon_dict['points']
-                polygon_type = polygon_dict['label']
+                # polygon_type = polygon_dict['label']
                 polygon = np.array(polygon, dtype=np.float64)
                 polygon = polygon.reshape((-1, 1, 2))
                 polygon = polygon.astype(np.int32)
