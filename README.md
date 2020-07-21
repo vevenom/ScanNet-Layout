@@ -91,7 +91,7 @@ If you use this dataset, please cite:
 
 ```
 @article{stekovic2020general,
-  title={General 3D Room Layout from a Single View by Render-and-Compare},  
+  title={{General 3D Room Layout from a Single View by Render-and-Compare}},  
   author={Stekovic, Sinisa and Hampali, Shreyas and Rad, Mahdi and Deb Sarkar, Sayan and Fraundorfer, Friedrich and Lepetit, Vincent},  
   journal={{European Conference on Computer Vision}},  
   year={2020}  
