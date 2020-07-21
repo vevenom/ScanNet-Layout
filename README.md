@@ -75,3 +75,25 @@ e.g.:
 ```
 
 Predicted *.npy files in layout_depth folder contain layout depth maps.
+
+Citation
+
+If you use this dataset, please cite:
+
+```
+@inproceedings{dai2017scannet,  
+    title={ScanNet: Richly-annotated 3D Reconstructions of Indoor Scenes},  
+    author={Dai, Angela and Chang, Angel X. and Savva, Manolis and Halber, Maciej and Funkhouser, Thomas and Nie{\ss}ner, Matthias},  
+    booktitle = {Proc. Computer Vision and Pattern Recognition (CVPR), IEEE},  
+    year = {2017}  
+}
+```
+
+```
+@article{stekovic2020general,
+  title={General 3D Room Layout from a Single View by Render-and-Compare},  
+  author={Stekovic, Sinisa and Fraundorfer, Friedrich and Lepetit, Vincent},  
+  journal={{European Conference on Computer Vision}},  
+  year={2020}  
+}
+```
