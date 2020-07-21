@@ -42,7 +42,7 @@ GT_PATH points to the ground truth folder. The default value for GT_PATH is ./Sc
 
 COMP_OUTPUT_PATH points to the output folder.
 
-where eval_2D, eval_3D specify whether to evaluate the quality of layouts in 2D and 3D. 
+eval_2D, eval_3D specify whether to evaluate the quality of layouts in 2D and 3D. 
 
 #### Predictions Format
 
