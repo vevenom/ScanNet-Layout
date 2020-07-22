@@ -94,7 +94,15 @@ If you use this dataset, please cite:
 @article{stekovic2020general,
   title={{General 3D Room Layout from a Single View by Render-and-Compare}},  
   author={Stekovic, Sinisa and Hampali, Shreyas and Rad, Mahdi and Deb Sarkar, Sayan and Fraundorfer, Friedrich and Lepetit, Vincent},  
-  journal={{European Conference on Computer Vision}},  
+  journal={{European Conference on Computer Vision (ECCV)}},  
   year={2020}  
 }
 ```
+
+# ScanNet Terms of Use
+
+As our dataset is based on images from the ScanNet dataset, you should also agree to the [ScanNet Terms of Use](http://kaldir.vc.in.tum.de/scannet/ScanNet_TOS.pdf):
+
+> If you would like to download the ScanNet data, please fill out an agreement to the ScanNet Terms of Use and send it to scannet@googlegroups.com.
+
+For more information, please visit [ScanNet/ScanNet](https://github.com/ScanNet/ScanNet).
