@@ -11,6 +11,14 @@ and in some cases we include similar viewpoints to evaluate effects of noise (e.
 motion blur). Our benchmark supports evaluation metrics both in 2D and 3D. Please refer to our original paper 
 [General 3D Room Layout from a Single View by Render-and-Compare](https://arxiv.org/abs/2001.02149) for more information.
 
+#### Note
+
+If you are interested into the implementation of our approach, General 3D Room Layout from a Single View by Render-and-Compare, please visit:
+
+https://github.com/vevenom/RoomLayout3D_RandC
+
+
+
 ## Data
 
 The dataset can be obtained here: [Dataset Link](https://files.icg.tugraz.at/f/2cefdc3a5b9a48d7aaaa/?dl=1)
